@@ -322,8 +322,9 @@
    "HFS_HOME_PKG=/app/pkg/dev",
    "APP_ROOT=/mnt/si",
    "PKG_ROOT=/mnt/pkg",
-   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/java/src/hr",
-   "PC_DATA_FOLDER=/mnt/pc_data/java/bin",
+   "CODE_PATH=/app/si/tp/code/code.tar.gz",
+   "BATCH_SHELL_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/batch",
+   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/hr",
    "JAVA_HOME=/opt/ibm/java/jre/",
    "LC_ALL=C.UTF-8",
    "HEALTH_CHECK_PATH=http://localhost:10000/SiDev/"
@@ -352,8 +353,9 @@
    "HFS_HOME_PKG=/app/pkg/dev",
    "APP_ROOT=/mnt/si",
    "PKG_ROOT=/mnt/pkg",
-   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/java/src/hr",
-   "PC_DATA_FOLDER=/mnt/pc_data/java/bin",
+   "CODE_PATH=/app/si/tp3/code/code.tar.gz",
+   "BATCH_SHELL_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/batch",
+   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/hr",
    "JAVA_HOME=/opt/ibm/java/jre/",
    "LC_ALL=C.UTF-8",
    "HEALTH_CHECK_PATH=http://localhost:10000/SiDev/"
@@ -380,8 +382,9 @@
   "Env": [
    "HFS_HOME=/app/si/tp3",
    "APP_ROOT=/mnt/si",
-   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/java/src/hr",
-   "PC_DATA_FOLDER=/mnt/pc_data/java/bin",
+   "CODE_PATH=/app/si/tp3/code/code.tar.gz",
+   "BATCH_SHELL_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/batch",
+   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/hr",
    "JAVA_HOME=/opt/ibm/java/jre/",
    "LC_ALL=C.UTF-8",
    "HEALTH_CHECK_PATH=http://localhost:10000/sitp/"
@@ -408,8 +411,9 @@
   "Env": [
    "HFS_HOME=/app/si/tp4",
    "APP_ROOT=/mnt/si",
-   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/java/src/hr",
-   "PC_DATA_FOLDER=/mnt/pc_data/java/bin",
+   "CODE_PATH=/app/si/tp4/code/code.tar.gz",
+   "BATCH_SHELL_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/batch",
+   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/hr",
    "JAVA_HOME=/opt/ibm/java/jre/",
    "LC_ALL=C.UTF-8",
    "HEALTH_CHECK_PATH=http://localhost:10000/sitp/"
@@ -436,8 +440,9 @@
   "Env": [
    "HFS_HOME=/app/si/tp5",
    "APP_ROOT=/mnt/si",
-   "PC_DATA_FOLDER=/mnt/pc_data/java/bin",
-   "JAVA_HOME=/opt/ibm/java/jre/",
+   "CODE_PATH=/app/si/tp5/code/code.tar.gz",
+   "BATCH_SHELL_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/batch",
+   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/hr",
    "LC_ALL=C.UTF-8",
    "HEALTH_CHECK_PATH=http://localhost:10000/sitp/"
   ],
