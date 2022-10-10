@@ -828,6 +828,51 @@
  },
 
  {
+  "Name": "SIP",
+  "AdminOnly": true,
+  "ExternalGroups": "RBA",
+  "Project": "sirius",
+  "Image": "hrvestigo/sirius-sip:latest",
+  "Env": [
+   "JAVA_HOME=/opt/ibm/java/jre/",
+   "LC_ALL=C.UTF-8",
+   "HEALTH_CHECK_PATH=http://localhost:10000/sip/"
+  ],
+  "HostConfig": {
+   "PortBindings": {
+    "10000/tcp": [
+     {
+      "HostPort": "HTTP_PORT"
+     }
+    ],
+    "10002/tcp": [
+     {
+      "HostPort": "HTTPS_PORT"
+     }
+    ],
+    "7777/tcp": [
+     {
+      "HostPort": "DEBUG_PORT"
+     }
+    ],
+    "9200/tcp": [
+     {
+      "HostPort": "BATCH_PORT"
+     }
+    ],
+    "22/tcp": [
+     {
+      "HostPort": "SSH_PORT"
+     }
+    ]
+   }
+  },
+  "Labels": {
+   "Environment": "SIP"
+  }
+ },
+
+ {
   "Name": "DCDEV",
   "AdminOnly": false,
   "Project": "dc",
@@ -1195,6 +1240,51 @@
   },
   "Labels": {
    "Environment": "GOT1-EURO"
+  }
+ },
+
+ {
+  "Name": "GOT2-EURO",
+  "AdminOnly": false,
+  "ExternalGroups": "ZABA",
+  "Project": "god",
+  "Image": "hrvestigo/gotovina-got2euro:latest",
+  "Env": [
+   "JAVA_HOME=/opt/ibm/java/jre/",
+   "LC_ALL=C.UTF-8",
+   "HEALTH_CHECK_PATH=http://localhost:10000/cash/"
+  ],
+  "HostConfig": {
+   "PortBindings": {
+    "10000/tcp": [
+     {
+      "HostPort": "HTTP_PORT"
+     }
+    ],
+    "10002/tcp": [
+     {
+      "HostPort": "HTTPS_PORT"
+     }
+    ],
+    "7777/tcp": [
+     {
+      "HostPort": "DEBUG_PORT"
+     }
+    ],
+    "9200/tcp": [
+     {
+      "HostPort": "BATCH_PORT"
+     }
+    ],
+    "22/tcp": [
+     {
+      "HostPort": "SSH_PORT"
+     }
+    ]
+   }
+  },
+  "Labels": {
+   "Environment": "GOT2-EURO"
   }
  }
 
