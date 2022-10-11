@@ -784,7 +784,7 @@
 
  {
   "Name": "SIP",
-  "AdminOnly": true,
+  "AdminOnly": false,
   "ExternalGroups": "RBA",
   "Project": "sirius",
   "Image": "hrvestigo/sirius-sip:latest",
