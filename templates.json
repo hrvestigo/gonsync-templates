@@ -460,6 +460,34 @@
  },
 
  {
+  "Name": "SIP",
+  "AdminOnly": false,
+  "ExternalGroups": "RBA",
+  "Project": "sirius",
+  "Image": "was_liberty:latest",
+  "Env": [
+   "HFS_HOME=/app/si/p",
+   "APP_ROOT=/mnt/si",
+   "CODE_PATH=/app/si/p/code/code.tar.gz",
+   "BATCH_SHELL_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/batch",
+   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/hr",
+   "LC_ALL=C.UTF-8",
+   "HEALTH_CHECK_PATH=http://localhost:10000/sip/"
+  ],
+  "HostConfig": {
+   "NetworkMode": "macvlan0",
+   "Binds": [
+    "/mnt/nfs_n42:/app/",
+    "/bin4liberty:/usr/local/sbin/",
+    "/home:/tmp/home"
+   ]
+  },
+  "Labels": {
+   "Environment": "SIP"
+  }
+ },
+
+ {
   "Name": "SIDEV-WAS",
   "AdminOnly": true,
   "Project": "sidev",
