@@ -458,6 +458,51 @@
    "Environment": "SITP5"
   }
  },
+ 
+ {
+  "Name": "SITP6",
+  "AdminOnly": false,
+  "ExternalGroups": "RBA",
+  "Project": "sirius",
+  "Image": "hrvestigo/sirius-tp6:latest",
+  "Env": [
+   "JAVA_HOME=/opt/ibm/java/jre/",
+   "LC_ALL=C.UTF-8",
+   "HEALTH_CHECK_PATH=http://localhost:10000/sitp/"
+  ],
+  "HostConfig": {
+   "PortBindings": {
+    "10000/tcp": [
+     {
+      "HostPort": "HTTP_PORT"
+     }
+    ],
+    "10002/tcp": [
+     {
+      "HostPort": "HTTPS_PORT"
+     }
+    ],
+    "7777/tcp": [
+     {
+      "HostPort": "DEBUG_PORT"
+     }
+    ],
+    "9200/tcp": [
+     {
+      "HostPort": "BATCH_PORT"
+     }
+    ],
+    "22/tcp": [
+     {
+      "HostPort": "SSH_PORT"
+     }
+    ]
+   }
+  },
+  "Labels": {
+   "Environment": "SITP6"
+  }
+ },
 
  {
   "Name": "SIP",
