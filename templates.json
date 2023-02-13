@@ -458,46 +458,29 @@
    "Environment": "SITP5"
   }
  },
- 
+
  {
   "Name": "SITP6",
   "AdminOnly": false,
   "ExternalGroups": "RBA",
   "Project": "sirius",
-  "Image": "hrvestigo/sirius-tp6:latest",
+  "Image": "was_liberty:latest",
   "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
+   "HFS_HOME=/app/si/tp6",
+   "APP_ROOT=/mnt/si",
+   "CODE_PATH=/app/si/tp6/code/code.tar.gz",
+   "BATCH_SHELL_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/batch",
+   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/hr",
    "LC_ALL=C.UTF-8",
    "HEALTH_CHECK_PATH=http://localhost:10000/sitp/"
   ],
   "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
+   "NetworkMode": "macvlan0",
+   "Binds": [
+    "/mnt/nfs_n42:/app/",
+    "/bin4liberty:/usr/local/sbin/",
+    "/home:/tmp/home"
+   ]
   },
   "Labels": {
    "Environment": "SITP6"
