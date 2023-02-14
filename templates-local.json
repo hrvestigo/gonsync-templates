@@ -1289,11 +1289,11 @@
  },
 
  {
-  "Name": "GOT1-EURO",
+  "Name": "GOT1",
   "AdminOnly": false,
   "ExternalGroups": "ZABA",
   "Project": "god",
-  "Image": "hrvestigo/gotovina-got1euro:latest",
+  "Image": "hrvestigo/gotovina-got1:latest",
   "Env": [
    "JAVA_HOME=/opt/ibm/java/jre/",
    "LC_ALL=C.UTF-8",
@@ -1329,12 +1329,12 @@
    }
   },
   "Labels": {
-   "Environment": "GOT1-EURO"
+   "Environment": "GOT1"
   }
  },
 
  {
-  "Name": "GOT2-EURO",
+  "Name": "GOT2",
   "AdminOnly": false,
   "ExternalGroups": "ZABA",
   "Project": "god",
@@ -1374,7 +1374,7 @@
    }
   },
   "Labels": {
-   "Environment": "GOT2-EURO"
+   "Environment": "GOT2"
   }
  }
 
