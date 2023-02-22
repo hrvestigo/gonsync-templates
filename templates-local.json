@@ -464,100 +464,6 @@
  },
 
  {
-  "Name": "SIDEV",
-  "AdminOnly": false,
-  "ExternalGroups": "RBA",
-  "Project": "sirius",
-  "Image": "hrvestigo/sirius-dev:latest",
-  "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/SiDev/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "SIDEV"
-  }
- },
-
- {
-  "Name": "SIDEV-WAS",
-  "AdminOnly": true,
-  "Project": "sirius",
-  "Image": "hrvestigo/sirius-dev-was:latest",
-  "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/SiDev/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "10003/tcp": [
-     {
-      "HostPort": "WAS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "SIDEV"
-  }
- },
-
- {
   "Name": "SIDEV2",
   "AdminOnly": false,
   "ExternalGroups": "RBA",
@@ -603,52 +509,7 @@
  },
 
  {
-  "Name": "SITP2",
-  "AdminOnly": false,
-  "ExternalGroups": "RBA",
-  "Project": "sirius",
-  "Image": "hrvestigo/sirius-tp2:latest",
-  "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/sitp/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "SITP2"
-  }
- },
-
- {
-  "Name": "SITP3-EURO",
+  "Name": "SITP3",
   "AdminOnly": false,
   "ExternalGroups": "RBA",
   "Project": "sirius",
@@ -693,7 +554,7 @@
  },
 
  {
-  "Name": "SITP4-EURO",
+  "Name": "SITP4",
   "AdminOnly": false,
   "ExternalGroups": "RBA",
   "Project": "sirius",
@@ -738,7 +599,7 @@
  },
 
  {
-  "Name": "SITP5-EURO",
+  "Name": "SITP5",
   "AdminOnly": false,
   "ExternalGroups": "RBA",
   "Project": "sirius",
@@ -869,96 +730,6 @@
   },
   "Labels": {
    "Environment": "SITP7"
-  }
- },
-
- {
-  "Name": "SIP",
-  "AdminOnly": false,
-  "ExternalGroups": "RBA",
-  "Project": "sirius",
-  "Image": "hrvestigo/sirius-sip:latest",
-  "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/sip/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "SIP"
-  }
- },
- 
- {
-  "Name": "SIP-EURO",
-  "AdminOnly": false,
-  "ExternalGroups": "RBA",
-  "Project": "sirius",
-  "Image": "hrvestigo/sirius-tp:latest",
-  "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/sitp/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "SIP-EURO"
   }
  },
  

@@ -310,37 +310,6 @@
    "Environment": "REL3_T1"
   }
  },
-
- {
-  "Name": "SIDEV",
-  "AdminOnly": false,
-  "ExternalGroups": "RBA",
-  "Project": "sirius",
-  "Image": "was_liberty:latest",
-  "Env": [
-   "HFS_HOME=/app/si/dev",
-   "HFS_HOME_PKG=/app/pkg/dev",
-   "APP_ROOT=/mnt/si",
-   "PKG_ROOT=/mnt/pkg",
-   "CODE_PATH=/app/si/tp/code/code.tar.gz",
-   "BATCH_SHELL_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/batch",
-   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/hr",
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/SiDev/"
-  ],
-  "HostConfig": {
-   "NetworkMode": "macvlan0",
-   "Binds": [
-    "/mnt/nfs_n42:/app/",
-    "/bin4liberty:/usr/local/sbin/",
-    "/home:/tmp/home"
-   ]
-  },
-  "Labels": {
-   "Environment": "SIDEV"
-  }
- },
  
  {
   "Name": "SIDEV2",
@@ -374,7 +343,7 @@
  },
 
  {
-  "Name": "SITP3-EURO",
+  "Name": "SITP3",
   "AdminOnly": false,
   "ExternalGroups": "RBA",
   "Project": "sirius",
@@ -403,7 +372,7 @@
  },
 
  {
-  "Name": "SITP4-EURO",
+  "Name": "SITP4",
   "AdminOnly": false,
   "ExternalGroups": "RBA",
   "Project": "sirius",
@@ -432,7 +401,7 @@
  },
 
  {
-  "Name": "SITP5-EURO",
+  "Name": "SITP5",
   "AdminOnly": false,
   "ExternalGroups": "RBA",
   "Project": "sirius",
@@ -512,60 +481,6 @@
   },
   "Labels": {
    "Environment": "SITP7"
-  }
- },
-
- {
-  "Name": "SIP",
-  "AdminOnly": false,
-  "ExternalGroups": "RBA",
-  "Project": "sirius",
-  "Image": "was_liberty:latest",
-  "Env": [
-   "HFS_HOME=/app/si/p",
-   "APP_ROOT=/mnt/si",
-   "CODE_PATH=/app/si/p/code/code.tar.gz",
-   "BATCH_SHELL_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/batch",
-   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/hr",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/sip/"
-  ],
-  "HostConfig": {
-   "NetworkMode": "macvlan0",
-   "Binds": [
-    "/mnt/nfs_n42:/app/",
-    "/bin4liberty:/usr/local/sbin/",
-    "/home:/tmp/home"
-   ]
-  },
-  "Labels": {
-   "Environment": "SIP"
-  }
- },
-
- {
-  "Name": "SIDEV-WAS",
-  "AdminOnly": true,
-  "Project": "sidev",
-  "Image": "was_base_9:9.0.5.6",
-  "Env": [
-   "HFS_HOME=/app/si/dev",
-   "PC_DATA_FOLDER=/mnt/pc_data/java/bin",
-   "JAVA_HOME=/opt/IBM/WebSphere/AppServer/java/8.0/",
-   "LC_ALL=C.UTF-8",
-   "CENTRALC=SIDEV-CENTRAL"
-  ],
-  "HostConfig": {
-   "NetworkMode": "macvlan0",
-   "Binds": [
-    "/mnt/nfs_n42:/app/",
-    "/bin4docker:/usr/local/sbin/",
-    "/home:/tmp/home",
-    "/was_bkp:/was_bkp"
-   ]
-  },
-  "Labels": {
-   "Environment": "SIDEV"
   }
  },
 
