@@ -30,6 +30,35 @@
    "Environment": "SIDEV2"
   }
  },
+ 
+ {
+  "Name": "SIDEV2_PKG",
+  "AdminOnly": false,
+  "ExternalGroups": "RBA",
+  "Project": "sirius",
+  "Image": "was_liberty:latest",
+  "Env": [
+   "HFS_HOME=/app/pkg/dev",
+   "APP_ROOT=/mnt/pkg",
+   "CODE_PATH=/app/pkg/tp/code/code.tar.gz",
+   "BATCH_SHELL_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/batch",
+   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/hr",
+   "JAVA_HOME=/opt/ibm/java/jre/",
+   "LC_ALL=C.UTF-8",
+   "HEALTH_CHECK_PATH=http://localhost:10000/pkg/"
+  ],
+  "HostConfig": {
+   "NetworkMode": "macvlan0",
+   "Binds": [
+    "/mnt/nfs_n42:/app/",
+    "/bin4liberty:/usr/local/sbin/",
+    "/home:/tmp/home"
+   ]
+  },
+  "Labels": {
+   "Environment": "SIDEV2_PKG"
+  }
+ },
 
  {
   "Name": "SITP3",
@@ -142,6 +171,34 @@
   },
   "Labels": {
    "Environment": "SITP6"
+  }
+ },
+ 
+ {
+  "Name": "SITP6_PKG",
+  "AdminOnly": false,
+  "ExternalGroups": "RBA",
+  "Project": "sirius",
+  "Image": "was_liberty:latest",
+  "Env": [
+   "HFS_HOME=/app/pkg/tp",
+   "APP_ROOT=/mnt/pkg",
+   "CODE_PATH=/app/pkg/tp/code/code.tar.gz",
+   "BATCH_SHELL_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/batch",
+   "BATCH_RESOURCE_LOCATION=/mnt/pc_data/sirius-batch/src/main/resources/hr",
+   "LC_ALL=C.UTF-8",
+   "HEALTH_CHECK_PATH=http://localhost:10000/pkgtp/"
+  ],
+  "HostConfig": {
+   "NetworkMode": "macvlan0",
+   "Binds": [
+    "/mnt/nfs_n42:/app/",
+    "/bin4liberty:/usr/local/sbin/",
+    "/home:/tmp/home"
+   ]
+  },
+  "Labels": {
+   "Environment": "SITP6_PKG"
   }
  },
  
