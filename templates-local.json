@@ -513,7 +513,7 @@
   "AdminOnly": true,
   "ExternalGroups": "RBA",
   "Project": "sirius",
-  "Image": "hrvestigo/sirius-dev2:latest",
+  "Image": "hrvestigo/sirius-dev2:neven-test",
   "Env": [
    "JAVA_HOME=/opt/ibm/java/jre/",
    "LC_ALL=C.UTF-8",
