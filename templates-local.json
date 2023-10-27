@@ -465,7 +465,7 @@
 
  {
   "Name": "SIDEV",
-  "AdminOnly": true,
+  "AdminOnly": false,
   "ExternalGroups": "RBA",
   "Project": "sirius",
   "Image": "hrvestigo/sirius-dev:latest",
