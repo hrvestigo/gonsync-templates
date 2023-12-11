@@ -1,100 +1,4 @@
 [
-
- {
-  "Name": "DCDEV-proba",
-  "AdminOnly": true,
-  "Project": "dc",
-  "Image": "hrvestigo/dcms-dev:latest",
-  "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/dc/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "DCDEVproba"
-  }
- },
-
-
- {
-  "Name": "DCP-WAS-proba",
-  "AdminOnly": true,
-  "Project": "dc",
-  "Image": "hrvestigo/dcms-p-was:latest",
-  "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/dc/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "10003/tcp": [
-     {
-      "HostPort": "WAS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "DCP"
-  }
- },
-
-
  {
   "Name": "CGDEV",
   "AdminOnly": false,
@@ -1008,146 +912,98 @@
  },
 
  {
-  "Name": "DCDEV",
-  "AdminOnly": false,
-  "Project": "dc",
-  "Image": "hrvestigo/vcms-dev:latest",
-  "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/dc/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
+    "Name": "DCDEV",
+    "AdminOnly": false,
+    "Project": "dc",
+    "Image": "hrvestigo/dcms-dev:latest",
+    "Env": [
+     "JAVA_HOME=/opt/ibm/java/jre/",
+     "LC_ALL=C.UTF-8",
+     "HEALTH_CHECK_PATH=http://localhost:10000/dc/"
     ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
+    "HostConfig": {
+     "PortBindings": {
+      "10000/tcp": [
+       {
+        "HostPort": "HTTP_PORT"
+       }
+      ],
+      "10002/tcp": [
+       {
+        "HostPort": "HTTPS_PORT"
+       }
+      ],
+      "7777/tcp": [
+       {
+        "HostPort": "DEBUG_PORT"
+       }
+      ],
+      "9200/tcp": [
+       {
+        "HostPort": "BATCH_PORT"
+       }
+      ],
+      "22/tcp": [
+       {
+        "HostPort": "SSH_PORT"
+       }
+      ]
      }
+    },
+    "Labels": {
+     "Environment": "DCDEVproba"
+    }
+   },
+  
+  
+   {
+    "Name": "DCP-WAS",
+    "AdminOnly": false,
+    "Project": "dc",
+    "Image": "hrvestigo/dcms-p-was:latest",
+    "Env": [
+     "JAVA_HOME=/opt/ibm/java/jre/",
+     "LC_ALL=C.UTF-8",
+     "HEALTH_CHECK_PATH=http://localhost:10000/dc/"
     ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
+    "HostConfig": {
+     "PortBindings": {
+      "10000/tcp": [
+       {
+        "HostPort": "HTTP_PORT"
+       }
+      ],
+      "10002/tcp": [
+       {
+        "HostPort": "HTTPS_PORT"
+       }
+      ],
+      "10003/tcp": [
+       {
+        "HostPort": "WAS_PORT"
+       }
+      ],
+      "7777/tcp": [
+       {
+        "HostPort": "DEBUG_PORT"
+       }
+      ],
+      "9200/tcp": [
+       {
+        "HostPort": "BATCH_PORT"
+       }
+      ],
+      "22/tcp": [
+       {
+        "HostPort": "SSH_PORT"
+       }
+      ]
      }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "DCDEV"
-  }
- },
-
- {
-  "Name": "DCDEV-WAS",
-  "AdminOnly": true,
-  "Project": "ccms",
-  "Image": "hrvestigo/vcms-dev-was:latest",
-  "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/dc/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "10003/tcp": [
-     {
-      "HostPort": "WAS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "DCDEV"
-  }
- },
-
- {
-  "Name": "DCP-WAS",
-  "AdminOnly": false,
-  "Project": "dc",
-  "Image": "hrvestigo/vcms-p-was:latest",
-  "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/dc/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "10003/tcp": [
-     {
-      "HostPort": "WAS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "DCP"
-  }
- },
+    },
+    "Labels": {
+     "Environment": "DCP"
+    }
+   },
 
  {
   "Name": "GODEV-EURO",
