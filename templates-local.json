@@ -50,7 +50,7 @@
   "Project": "ccms",
   "Image": "hrvestigo/liberty-template:ol2",
   "Env": [
-   "JAVA_HOME=/opt/java/openjdk/jre/",
+   "JAVA_HOME=/opt/java/openjdk/",
    "LC_ALL=C.UTF-8",
    "HEALTH_CHECK_PATH=http://localhost:10000/ccms/",
    "MDB_ROOT=/opt/ol/wlp/usr/shared/apps/mdb/",
