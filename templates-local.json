@@ -48,7 +48,7 @@
   "Name": "TEST OL",
   "AdminOnly": false,
   "Project": "ccms",
-  "Image": "hrvestigo/ccms-dev:ol2",
+  "Image": "hrvestigo/ccms-dev:ol3",
   "Env": [
    "JAVA_HOME=/opt/java/openjdk/",
    "LC_ALL=C.UTF-8",
