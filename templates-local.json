@@ -558,7 +558,7 @@
   "AdminOnly": false,
   "ExternalGroups": "RBA",
   "Project": "sirius",
-  "Image": "hrvestigo/sirius-dev:ol3",
+  "Image": "hrvestigo/sirius-dev:ol1.0",
   "Env": [
    "JAVA_HOME=/opt/java/openjdk/",
    "LC_ALL=C.UTF-8",
