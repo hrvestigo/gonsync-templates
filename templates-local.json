@@ -243,7 +243,7 @@
   "Project": "ccms",
   "Image": "hrvestigo/ccms-cgtp3:latest",
   "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
+   "JAVA_HOME=/opt/java/openjdk/",
    "LC_ALL=C.UTF-8",
    "HEALTH_CHECK_PATH=http://localhost:10000/ccms/"
   ],
