@@ -5,10 +5,10 @@
   "Project": "ccms",
   "Image": "hrvestigo/ccms-dev:latest",
   "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
+   "JAVA_HOME=/opt/java/openjdk/",
    "LC_ALL=C.UTF-8",
    "HEALTH_CHECK_PATH=http://localhost:10000/ccms/",
-   "MDB_ROOT=/opt/ibm/wlp/usr/shared/apps/mdb/",
+   "MDB_ROOT=/opt/ol/wlp/usr/shared/apps/mdb/",
    "MDB_SHARED_LIB=fwk,trx,DB2Lib"
   ],
   "HostConfig": {
