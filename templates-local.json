@@ -44,53 +44,6 @@
    "Environment": "CGDEV"
   }
  },
-{
-  "Name": "TEST-OL-CCMS",
-  "AdminOnly": false,
-  "Project": "ccms",
-  "Image": "hrvestigo/ccms-dev:ol1.0",
-  "Env": [
-   "JAVA_HOME=/opt/java/openjdk/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/ccms/",
-   "MDB_ROOT=/opt/ol/wlp/usr/shared/apps/mdb/",
-   "MDB_SHARED_LIB=fwk,trx,DB2Lib"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "CGDEV"
-  }
- }
- ,
-
  {
   "Name": "CGDEV-WAS",
   "AdminOnly": true,
@@ -551,51 +504,6 @@
   "Labels": {
    "Environment": "SIDEV"
   }
- },
-
- {
-  "Name": "TEST-OL-SIDEV",
-  "AdminOnly": false,
-  "ExternalGroups": "RBA",
-  "Project": "sirius",
-  "Image": "hrvestigo/sirius-dev:ol1.0",
-  "Env": [
-   "JAVA_HOME=/opt/java/openjdk/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/SiDev/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "SIDEV"
-  }
  }
  ,
 
@@ -1001,53 +909,8 @@
   "Labels": {
    "Environment": "RMDEV"
   }
- },
- 
-{
-  "Name": "TEST-OL-RMDEV",
-  "AdminOnly": false,
-  "Project": "gorm",
-  "Image": "hrvestigo/gorm-dev:ol1.0",
-  "Env": [
-   "JAVA_HOME=/opt/java/openjdk/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/goRM/"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "RMDEV"
-  }
-}
+ }
  ,
-
  {
     "Name": "DCDEV",
     "AdminOnly": false,
@@ -1090,54 +953,7 @@
     "Labels": {
      "Environment": "DCDEVproba"
     }
-   },
- 
-   {
-    "Name": "TEST-OL-DCDEV",
-    "AdminOnly": false,
-    "Project": "dc",
-    "Image": "hrvestigo/dcms-dev:ol1.0",
-    "Env": [
-     "JAVA_HOME=/opt/java/openjdk/",
-     "LC_ALL=C.UTF-8",
-     "HEALTH_CHECK_PATH=http://localhost:10000/dc/"
-    ],
-    "HostConfig": {
-     "PortBindings": {
-      "10000/tcp": [
-       {
-        "HostPort": "HTTP_PORT"
-       }
-      ],
-      "10002/tcp": [
-       {
-        "HostPort": "HTTPS_PORT"
-       }
-      ],
-      "7777/tcp": [
-       {
-        "HostPort": "DEBUG_PORT"
-       }
-      ],
-      "9200/tcp": [
-       {
-        "HostPort": "BATCH_PORT"
-       }
-      ],
-      "22/tcp": [
-       {
-        "HostPort": "SSH_PORT"
-       }
-      ]
-     }
-    },
-    "Labels": {
-     "Environment": "DCDEVproba"
-    }
-}
- ,
-  
-  
+   },  
    {
     "Name": "DCP-WAS",
     "AdminOnly": false,
