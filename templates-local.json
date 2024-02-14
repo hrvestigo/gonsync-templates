@@ -465,7 +465,7 @@
   "Name": "REL3_T1_LIBERTY",
   "AdminOnly": false,
   "Project": "ccms",
-  "Image": "ccms-rel3t1:l5",
+  "Image": "hrvestigo/ccms-rel3t1:l5",
   "Env": [
    "JAVA_HOME=/opt/ibm/java/jre/",
    "LC_ALL=C.UTF-8",
