@@ -461,6 +461,52 @@
   }
  },
 
+  {
+  "Name": "REL3_T1_LIBERTY",
+  "AdminOnly": false,
+  "Project": "ccms",
+  "Image": "ccms-rel3t1:l5",
+  "Env": [
+   "JAVA_HOME=/opt/ibm/java/jre/",
+   "LC_ALL=C.UTF-8",
+   "HEALTH_CHECK_PATH=http://localhost:10000/ccms/"
+  ],
+  "HostConfig": {
+   "PortBindings": {
+    "10000/tcp": [
+     {
+      "HostPort": "HTTP_PORT"
+     }
+    ],
+    "10002/tcp": [
+     {
+      "HostPort": "HTTPS_PORT"
+     }
+    ],
+    "7777/tcp": [
+     {
+      "HostPort": "DEBUG_PORT"
+     }
+    ],
+    "9200/tcp": [
+     {
+      "HostPort": "BATCH_PORT"
+     }
+    ],
+    "22/tcp": [
+     {
+      "HostPort": "SSH_PORT"
+     }
+    ]
+   }
+  },
+  "Labels": {
+   "Environment": "REL3_T1"
+  }
+ },
+ 
+ ,
+
  {
   "Name": "SIDEV",
   "AdminOnly": false,
