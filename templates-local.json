@@ -46,7 +46,7 @@
  },
  {
   "Name": "CGDEV-WAS",
-  "AdminOnly": true,
+  "AdminOnly": false,
   "Project": "ccms",
   "Image": "hrvestigo/ccms-dev-was:latest",
   "Env": [
