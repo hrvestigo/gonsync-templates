@@ -96,54 +96,6 @@
   }
  },
  {
-  "Name": "CGDEV-LIBERTY",
-  "AdminOnly": false,
-  "Project": "ccms",
-  "Image": "hrvestigo/ccms-dev:l6",
-  "Env": [
-   "JAVA_HOME=/opt/ibm/java/jre/",
-   "LC_ALL=C.UTF-8",
-   "HEALTH_CHECK_PATH=http://localhost:10000/ccms/",
-   "MDB_ROOT=/opt/ibm/wlp/usr/shared/apps/mdb/",
-   "MDB_SHARED_LIB=fwk,trx,DB2Lib",
-   "REST_ENPOINTS=/mnt/ccms/config/rest_enpoints.txt",
-   "DATABASE_ENDPOINT=/mnt/ccms/config/database_enpoint.txt"
-  ],
-  "HostConfig": {
-   "PortBindings": {
-    "10000/tcp": [
-     {
-      "HostPort": "HTTP_PORT"
-     }
-    ],
-    "10002/tcp": [
-     {
-      "HostPort": "HTTPS_PORT"
-     }
-    ],
-    "7777/tcp": [
-     {
-      "HostPort": "DEBUG_PORT"
-     }
-    ],
-    "9200/tcp": [
-     {
-      "HostPort": "BATCH_PORT"
-     }
-    ],
-    "22/tcp": [
-     {
-      "HostPort": "SSH_PORT"
-     }
-    ]
-   }
-  },
-  "Labels": {
-   "Environment": "CGDEV"
-  }
- }
- ,
- {
   "Name": "CGTP2",
   "AdminOnly": false,
   "Project": "ccms",
