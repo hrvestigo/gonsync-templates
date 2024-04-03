@@ -377,7 +377,7 @@
   "Name": "CGTP7 TEST",
   "AdminOnly": false,
   "Project": "ccms",
-  "Image": "hrvestigo/ccms-dev:latest",
+  "Image": "hrvestigo/ccms-dev:j17",
   "Env": [
    "JAVA_HOME=/opt/java/openjdk/",
    "LC_ALL=C.UTF-8",
