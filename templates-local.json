@@ -46,8 +46,8 @@
  },
  
  {
-  "Name": "CGDEV (Postgre)",
-  "AdminOnly": true,
+  "Name": "CGDEV-Postgre",
+  "AdminOnly": false,
   "Project": "ccms",
   "Image": "hrvestigo/ccms-dev_pg:latest",
   "Env": [
