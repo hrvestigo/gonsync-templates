@@ -420,10 +420,10 @@
  },
 
  {
-  "Name": "CGTP8",
+  "Name": "CGT8",
   "AdminOnly": true,
   "Project": "ccms",
-  "Image": "hrvestigo/ccms-cgtp8:latest",
+  "Image": "hrvestigo/ccms-cgt8:latest",
   "Env": [
    "JAVA_HOME=/opt/java/openjdk/",
    "LC_ALL=C.UTF-8",
@@ -461,7 +461,7 @@
    }
   },
   "Labels": {
-   "Environment": "CGTP8"
+   "Environment": "CGT8"
   }
  },
  
