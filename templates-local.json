@@ -465,7 +465,7 @@
  
  {
   "Name": "CGT8",
-  "AdminOnly": true,
+  "AdminOnly": false,
   "Project": "ccms",
   "Image": "hrvestigo/ccms-cgt8:latest",
   "Env": [
